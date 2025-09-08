@@ -1,25 +1,32 @@
-import {createContext, useState} from "react"
-import Menu from "./Component/Menu";
-import Quiz from "./Component/Quiz";
-import Score from "./Component/Score";
+// import {createContext, useState} from "react"
+// import Menu from "./Component/Menu";
+// import Quiz from "./Component/Quiz";
+// import Score from "./Component/Score";
 
-import './App.css'
+// import './App.css'
 
-export const DataContext = createContext()
+// export const DataContext = createContext()
 
-function App() {
-  const [appState, setAppState] = useState("menu")
-  const [score,setScore] = useState(0)
-  return(
-    <DataContext.Provider value={{appState,setAppState,score,setScore}}>
-      <div className="App">
-        <h1>Web Development Quiz</h1>
-        {appState === "menu" && <Menu/>}
-        {appState === "quiz" && <Quiz/>}
-        {appState === "score" && <Score/>}
-      </div>
-    </DataContext.Provider>
-  );
+// function App() {
+//   const [appState, setAppState] = useState("menu")
+//   const [score,setScore] = useState(0)
+//   return(
+//     <DataContext.Provider value={{appState,setAppState,score,setScore}}>
+//       <div className="App">
+//         <h1>Web Development Quiz</h1>
+//         {appState === "menu" && <Menu/>}
+//         {appState === "quiz" && <Quiz/>}
+//         {appState === "score" && <Score/>}
+//       </div>
+//     </DataContext.Provider>
+//   );
+// }
+
+// export default App;
+
+import React from 'react'
+import Router2 from './router2'
+
+export default function App() {
+  return <Router2/>
 }
-
-export default App;
